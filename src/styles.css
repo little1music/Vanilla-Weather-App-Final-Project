@@ -20,8 +20,8 @@ h3 {
   text-align: right;
 }
 header img {
-  max-width: 135px;
-  max-height: 135px;
+  max-width: 105px;
+  max-height: 105px;
   position: relative;
   border: none;
   display: inline;
@@ -45,5 +45,4 @@ img {
   border-radius: 8px;
   border: 1px solid black 0.9;
   margin-bottom: 50px;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
