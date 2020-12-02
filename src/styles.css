@@ -5,7 +5,6 @@ body {
 }
 form {
   font-size: 20px;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 h1 {
   text-align: right;
@@ -39,7 +38,6 @@ img {
   margin: 0 auto;
   max-width: 100px;
   max-height: 100px;
-  border: 3px dotted gray;
   border-radius: 70px;
   padding: 15px 15px;
 }
@@ -47,4 +45,5 @@ img {
   border-radius: 8px;
   border: 1px solid black 0.9;
   margin-bottom: 50px;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
