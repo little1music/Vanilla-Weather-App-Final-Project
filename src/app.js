@@ -20,7 +20,7 @@ function dateTime() {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thursdsay",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
@@ -42,7 +42,6 @@ function dateTime() {
 now.innerHTML = dateTime();
 
 function displayWeatherCondition(response) {
-  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp) + "°C | °F";
