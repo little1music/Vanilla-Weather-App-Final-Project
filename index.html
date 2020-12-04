@@ -19,9 +19,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App Final Project</title>
+    <title>Vanilla Weather App Final Project</title>
   </head>
-
   <body>
     <div class="container">
       <header>
@@ -33,44 +32,43 @@
           <span id="city">Franklin, TN</span><img src="src/images/windy.png" />
         </h1>
         <h2 id="date-time">Today's Day and Time</h2>
-        <h3>
-          <span id="temperature">74° / </span>
-          <span id="humidity">10%</span>
-        </h3>
+        <ul>
+          <li id="temperature">74°C | °F</li>
+          <li id="humidity">10%</li>
+          <li id="wind-speed">2 mph</li>
+        </ul>
       </header>
       <p>
-        <i class="far fa-star"></i
-        ><em> today looks like the perfect day for a perfect day </em
-        ><i class="far fa-star"></i>
+        <i class="fas fa-star-of-life"></i><strong> YOU </strong>make today
+        better <i class="fas fa-star-of-life"></i>
       </p>
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <p>monday</p>
-              <img src="src/images/partly cloudy.jpg" />
-              <p>72°/5%</p>
-            </div>
-            <div class="col">
-              <p>tuesday</p>
-              <img src="src/images/rain.jpg" />
-              <p>68°/100%</p>
-            </div>
-            <div class="col">
-              <p>wednesday</p>
-              <img src="src/images/snow.jpg" />
-              <p>22°/80%</p>
-            </div>
-            <div class="col">
-              <p>thursday</p>
-              <img src="src/images/sunny.jpg" />
-              <p>78°/0%</p>
-            </div>
-            <div class="col">
-              <p>friday</p>
-              <img src="src/images/thunderstorm.png" />
-              <p>82°/70%</p>
-            </div>
+      <div class="card"></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <p>monday</p>
+            <img src="src/images/partly cloudy.jpg" />
+            <p>72°/5%</p>
+          </div>
+          <div class="col">
+            <p>tuesday</p>
+            <img src="src/images/rain.jpg" />
+            <p>68°/100%</p>
+          </div>
+          <div class="col">
+            <p>wednesday</p>
+            <img src="src/images/snow.jpg" />
+            <p>22°/80%</p>
+          </div>
+          <div class="col">
+            <p>thursday</p>
+            <img src="src/images/sunny.jpg" />
+            <p>78°/0%</p>
+          </div>
+          <div class="col">
+            <p>friday</p>
+            <img src="src/images/thunderstorm.jpg" />
+            <p>82°/70%</p>
           </div>
         </div>
       </div>

@@ -45,9 +45,11 @@ function displayWeatherCondition(response) {
   console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =
-    Math.round(response.data.main.temp) + "°C / ";
+    Math.round(response.data.main.temp) + "°C | °F";
   document.querySelector("#humidity").innerHTML =
-    response.data.main.humidity + "%";
+    "precipitation: " + response.data.main.humidity + "% ";
+  document.querySelector("#wind-speed").innerHTML =
+    Math.round(response.data.main.wind) + "mph";
 }
 
 function searchCity(city) {
