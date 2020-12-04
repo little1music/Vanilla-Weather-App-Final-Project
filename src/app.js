@@ -45,8 +45,9 @@ function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp) + "°C | °F";
+  document.querySelector("#condition").innerHTML = response.data.main.condition;
   document.querySelector("#humidity").innerHTML =
-    "precipitation: " + response.data.main.humidity + "% ";
+    "Precipitation: " + response.data.main.humidity + "% ";
   document.querySelector("#wind-speed").innerHTML =
     Math.round(response.data.main.wind) + "mph";
 }
