@@ -9,6 +9,13 @@ form {
   padding: 10px 5px 20px 0px;
 }
 
+h1,
+header img,
+h2,
+ul {
+  text-align: center;
+}
+
 h1 {
   font-size: 28px;
   text-shadow: 1px 1px 2px #3c3c3c;
@@ -23,17 +30,15 @@ ul {
   list-style: none;
   font-size: 15px;
   padding: 0;
-  line-height: 18px;
-  margin: 0;
+  line-height: 19px;
+  margin-bottom: 18px;
 }
 
 header img {
-  max-width: 110px;
-  max-height: 110px;
+  max-width: 100px;
+  max-height: 100px;
   border: none;
-  display: inline;
-  vertical-align: middle;
-  padding: 20px 13px 20px 0px;
+  display: block;
   border-radius: 0;
 }
 
@@ -46,8 +51,8 @@ p {
 img {
   display: block;
   margin: 0 auto;
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 90px;
+  max-height: 90px;
   border-radius: 70px;
   padding: 8px 8px;
   border-radius: 0;
@@ -58,9 +63,14 @@ img {
   max-width: 700px;
 }
 
+.card {
+  border: 1px solid black;
+}
+
 .inspire {
   text-align: center;
   font-size: 21px;
   text-shadow: 1px 1px 2px #3c3c3c;
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
