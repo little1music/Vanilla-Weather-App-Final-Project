@@ -1,5 +1,5 @@
 let now = document.querySelector("#date-time");
-function dateTime() {
+function dateTime(currentTime) {
   let currentTime = new Date();
   let months = [
     "January",

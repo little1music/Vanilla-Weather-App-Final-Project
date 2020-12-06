@@ -77,11 +77,12 @@ img {
   margin-top: 20px;
 }
 
-#temperature {
-  font-size: 18px;
+.temperature {
+  font-size: 24px;
 }
 
-#temperature .units {
-  font-size: 8px;
-  top: -18px;
+.temperature .units {
+  position: relative;
+  font-size: 10px;
+  top: -10px;
 }
