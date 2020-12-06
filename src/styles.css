@@ -33,6 +33,7 @@ ul {
   line-height: 19px;
   margin-bottom: 18px;
   margin-top: 10px;
+  text-transform: capitalize;
 }
 
 header img {

@@ -45,11 +45,13 @@ function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp) + "°C | °F";
-  document.querySelector("#condition").innerHTML = response.data.main.condition;
+  document.querySelector("#condition").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML =
-    "Precipitation: " + response.data.main.humidity + "% ";
+    "Humidity: " + response.data.main.humidity + "% ";
   document.querySelector("#wind-speed").innerHTML =
-    Math.round(response.data.main.wind) + "mph";
+    Math.round(response.data.wind.speed) + " km/H";
+  console.log(response.data);
 }
 
 function searchCity(city) {
