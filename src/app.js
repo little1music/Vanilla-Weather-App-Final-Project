@@ -76,7 +76,17 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrentheitTemperature = (14 * 9) / 5 + 32;
+  let temperature = document.querySelector("temperature");
+  temperature.innerHTML = Math.round(fahrentheitTemperature);
+}
+
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 searchCity("New York");
