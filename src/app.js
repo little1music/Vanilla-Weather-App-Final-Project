@@ -1,5 +1,5 @@
 let now = document.querySelector("#date-time");
-function dateTime(currentTime) {
+function dateTime() {
   let currentTime = new Date();
   let months = [
     "January",
@@ -39,7 +39,7 @@ function dateTime(currentTime) {
   }, ${month} ${date} ${hours}:${minutes}`;
   return dateTime;
 }
-now.innerHTML = dateTime();
+document.querySelector("#date-time").innerHTML = dateTime();
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -51,7 +51,6 @@ function displayWeatherCondition(response) {
     "Humidity: " + response.data.main.humidity + "% ";
   document.querySelector("#wind-speed").innerHTML =
     Math.round(response.data.wind.speed) + " km/H";
-  console.log(response.data);
 }
 
 function searchCity(city) {
