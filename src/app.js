@@ -43,17 +43,23 @@ document.querySelector("#date-time").innerHTML = dateTime();
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML =
-    Math.round(response.data.main.temp) + "°C | °F";
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML =
     "Humidity: " + response.data.main.humidity + "% ";
   document.querySelector("#wind-speed").innerHTML =
     Math.round(response.data.wind.speed) + " km/H";
+  celsiusTemperature = response.data.main.temp;
+  document
+    .querySelector("#windy-icon")
+    .setAttribute(
+      "src",
+      `src/images/${response.data.weather[0].main.toLowerCase()}.png`
+    );
 }
-
-celsiusTemperature = response.data.main.temp;
 
 function searchCity(city) {
   let apiKey = "321e7c1f77f8c89d8b6d1fe2e5f17d58";
