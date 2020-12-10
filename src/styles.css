@@ -69,6 +69,7 @@ img {
 
 .card {
   border: 1px solid black;
+  max-width: 700px;
 }
 
 .inspire {
@@ -82,11 +83,11 @@ img {
 .temperature {
   font-size: 42px;
   margin-bottom: 0;
+  text-shadow: 1px 1px 0.5px #3c3c3c;
 }
 
 .temperature .units {
   position: relative;
   font-size: 12px;
   top: -23px;
-  cursor: default;
 }
