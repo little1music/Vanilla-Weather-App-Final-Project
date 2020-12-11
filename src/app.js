@@ -60,12 +60,19 @@ function displayWeatherCondition(response) {
       `src/images/${response.data.weather[0].main.toLowerCase()}.png`
     );
 }
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecast;
+}
 
 function searchCity(city) {
   let apiKey = "321e7c1f77f8c89d8b6d1fe2e5f17d58";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+
+apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
 
 function handleSubmit(event) {
   event.preventDefault();
