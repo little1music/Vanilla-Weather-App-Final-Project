@@ -1,6 +1,6 @@
 let now = document.querySelector("#date-time");
-function dateTime() {
-  let currentTime = new Date();
+function formatDate(timestamp) {
+  let today = new Date(timestamp);
   let months = [
     "January",
     "February",
@@ -24,22 +24,24 @@ function dateTime() {
     "Friday",
     "Saturday",
   ];
-  let month = months[currentTime.getMonth()];
-  let date = currentTime.getDate();
-  let hours = currentTime.getHours();
+  let month = months[date.getMonth()];
+  let now = date.getDate();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = currentTime.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let dateTime = `${
-    days[currentTime.getDay()]
-  }, ${month} ${date} ${hours}:${minutes}`;
-  return dateTime;
+  let day = `${days[date.getDay()]}, ${month} ${date} ${hours}:${minutes}`;
+  return day;
 }
-document.querySelector("#date-time").innerHTML = dateTime();
+document.querySelector("#date-time").innerHTML = formatDate();
+
+function getHours(timestamp) {
+  return `${hours}:${minutes}`;
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -60,15 +62,29 @@ function displayWeatherCondition(response) {
       `src/images/${response.data.weather[0].main.toLowerCase()}.png`
     );
 }
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  forecastElement.innerHTML = `
+    <div class="col-2">
+      <h3>${getHours(forecast.dt * 1000)}</h3>
+      <img src="src/images/partly cloudy.png" />
+      <div class="weather-forecast-temperature"><strong>${Math.round(
+        forecast.main.temp_max
+      )}°</strong>/${Math.round(forecast.main.temp_min)}°</div>
+    </div>
+  `;
+  console.log(forecast);
+}
 
 function searchCity(city) {
   let apiKey = "321e7c1f77f8c89d8b6d1fe2e5f17d58";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
-}
 
-apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayForecast);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function handleSubmit(event) {
   event.preventDefault();
