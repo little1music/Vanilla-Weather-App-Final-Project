@@ -60,10 +60,6 @@ function displayWeatherCondition(response) {
       `src/images/${response.data.weather[0].main.toLowerCase()}.png`
     );
 }
-function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  forecast;
-}
 
 function searchCity(city) {
   let apiKey = "321e7c1f77f8c89d8b6d1fe2e5f17d58";

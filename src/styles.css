@@ -46,9 +46,9 @@ header img {
   padding: 5px 0px 10px 0px;
 }
 
-p {
+h3 {
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   padding: 8px;
 }
 
@@ -90,4 +90,10 @@ img {
   position: relative;
   font-size: 12px;
   top: -23px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  font-size: 17px;
+  padding: 8px;
 }
