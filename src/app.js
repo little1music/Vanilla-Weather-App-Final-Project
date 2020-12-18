@@ -1,6 +1,6 @@
 let now = document.querySelector("#date-time");
 function formatDate(timestamp) {
-  let today = new Date(timestamp);
+  let date = new Date(timestamp);
   let months = [
     "January",
     "February",
@@ -25,7 +25,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let month = months[date.getMonth()];
-  let now = date.getDate();
+  let day = date.getDate();
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
