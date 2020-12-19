@@ -1,4 +1,3 @@
-let now = document.querySelector("#date-time");
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let months = [
@@ -25,7 +24,17 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let month = months[date.getMonth()];
-  let day = date.getDate();
+
+  let day = `${days[date.getDay()]}, ${month} ${date.getDate()} ${getHours(
+    date
+  )}`;
+  return day;
+}
+
+let now = new Date();
+document.querySelector("#date-time").innerHTML = formatDate(now);
+function getHours(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -34,12 +43,6 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let day = `${days[date.getDay()]}, ${month} ${date} ${hours}:${minutes}`;
-  return day;
-}
-document.querySelector("#date-time").innerHTML = formatDate();
-
-function getHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
